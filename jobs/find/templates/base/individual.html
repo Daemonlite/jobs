@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<body>
+    <div class="headerbar">
+        <h2><a href="{% url 'jobs' %}">&#8952; back to home</a></h2>
+    </div>
+    
+     <h1>Available freelance jobs</h1>
+    <div class="individal">
+        {% for x in ind %}
+    </div>
+    <div class="name">
+        <div class="profile">
+            <img src="img/profile.png" alt="profile" height="10" width="10">
+        </div>
+       <a href="{% url 'application'  %}"> {{x.job_descr}}</a>
+        <small class="about">{{x.amount_due}}</small>
+    </div>
+    <div class="descr">
+        
+</div>
+
+{% endfor %}
+
+</body>
+{% endblock content %}
